@@ -44,6 +44,8 @@ spec:
               value: "yes"
           image: mysql:5.7
           name: mysqldb
+          args:
+            - "--ignore-db-dir=lost+found"
           volumeMounts:
             - mountPath: /var/lib/mysql
               name: mysqldb-data
